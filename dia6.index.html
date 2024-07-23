@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Supermercado</title>
+    <link rel="stylesheet" href="dia6.estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lista de Supermercado</h1>
+    </header>
+    <section>
+        <div>
+            <p>Bem vindo à Lista de Compras! Clique no carrinho para começar:</p>
+        </div>
+        <div class="preloader">
+            <svg class="cart" id="staticCart" role="img" aria-label="Shopping cart line animation" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                    <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                        <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
+                        <circle cx="43" cy="111" r="13" />
+                        <circle cx="102" cy="111" r="13" />
+                    </g>
+                    <g class="cart__lines" stroke="#b19cd9">
+                        <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" stroke-dasharray="338 338" stroke-dashoffset="338" />
+                        <g class="cart__wheel1" transform="rotate(0,43,111)">
+                            <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                        </g>
+                        <g class="cart__wheel2" transform="rotate(0,102,111)">
+                            <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="container" style="display: none;">
+            <div class="input-group">
+                <input type="text" id="itemInput" name="itemInput" placeholder="Digite um item:">
+                <div class="categoria-grupo">
+                    <p>Escolha a categoria que esse item se encaixa:</p>
+                    <input type="radio" name="categoria" id="frutas" value="Frutas">
+                    <label for="frutas">Frutas</label>
+                    <input type="radio" name="categoria" id="laticinios" value="Laticínios">
+                    <label for="laticinios">Laticínios</label>
+                    <input type="radio" name="categoria" id="congelados" value="Congelados">
+                    <label for="congelados">Congelados</label>
+                    <input type="radio" name="categoria" id="doces" value="Doces">
+                    <label for="doces">Doces</label>
+                    <input type="radio" name="categoria" id="outros" value="Outros">
+                    <label for="outros">Outros</label>
+                </div>
+                <div class="buttons"> 
+                <button id="addItemBtn">Adicionar Item</button>
+                <input type="button" id="closeCart" value="Mostar Lista de Compras" onclick="mostrarCompras()">
+                </div>
+            </div>
+            <div class="remItem" style="display: none;"> 
+                <p><strong>Você deseja remover algum item?</strong></p>
+                <input type="radio" name="radQuestion" id="radQuestionNao" value="Sim">
+                <label for="radQuestionSim">Sim</label>
+                <input type="radio" name="radQuestion" id="radQuestionSim" value="Não">
+                <label for="radQuestionNao">Não</label>
+                <input type="text" name="itemRemove" id="itemRemove" style="display: none;" placeholder="Digite o item a ser removido">
+                <button id="removeItemBtn" style="display: none;">Remover Item</button>
+            </div>
+        </div>
+    </div>
+    <div id="result" style="display: none;">
+        <p id="result-message"></p>
+    </div>
+    </section>
+    <footer>
+        <p>#Desafio7DaysOfCode</p> 
+    </footer>
+    <script src="dia6.js"></script>
+</body>
+</html>
