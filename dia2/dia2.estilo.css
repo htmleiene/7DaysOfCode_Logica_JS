@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffccbc;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .bi-house,
+header .bi-house-fill {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #bf360c;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header .bi-house:hover,
+header .bi-house-fill:hover {
+    color: #d84315;
+    transform: translateY(-50%) scale(1.1);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.329);
+}
+
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #d84315;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border: 2px solid #ffccbc;
+    border-radius: 5px;
+    background-color: #ffe0b2;
+    color: #bf360c;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #d84315;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #bf360c;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#resultMessage {
+    font-size: 1.2em;
+    color: #bf360c;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .bi-house,
+    header .bi-house-fill {
+        top: 10px;
+        left: 10px;
+        transform: none;
+        font-size: 30px;
+    }
+
+
+    section {
+        width: 100%;
+        padding: 15px;
+    }
+}

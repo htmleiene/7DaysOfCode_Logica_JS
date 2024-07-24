@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
 
 body {
     background-color: rgb(250, 121, 121);
@@ -9,6 +9,34 @@ header {
     font-family: 'Fira Sans', monospace;
     color: white;
     text-align: center;
+    position: relative;
+}
+
+header .bi-house,
+header .bi-house-fill {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header .bi-house {
+    color: whitesmoke;
+}
+
+header .bi-house-fill {
+    color: whitesmoke;
+    display: none;
+}
+
+header a:hover .bi-house {
+    display: none;
+}
+
+header a:hover .bi-house-fill {
+    display: block;
 }
 
 section {
@@ -100,7 +128,7 @@ footer {
 }
 
 #closeCart:hover {
-background-color: #a380c4; /* Tom mais escuro de roxo pastel ao passar o mouse */
+    background-color: #a380c4; /* Tom mais escuro de roxo pastel ao passar o mouse */
 }
 
 .preloader {

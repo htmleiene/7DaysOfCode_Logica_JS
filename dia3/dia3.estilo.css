@@ -19,17 +19,16 @@
 body {
     background-color: rgb(20, 42, 65);
     font-family: 'Roboto', sans-serif;
-
 }
 
-header{
+header {
     font-family: 'Roboto Mono', monospace;
     color: white;
     text-align: center;
-
+    position: relative;
 }
 
-section{
+section {
     font-family: 'Roboto Mono', monospace;
     background-color: whitesmoke;
     border-radius: 10px;
@@ -37,12 +36,58 @@ section{
     width: 500px;
     margin: auto;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0);
-
 }
 
-footer{
+footer {
     color: white;
     text-align: center;
     font-style: italic;
     font-family: 'Roboto Mono', monospace;
+}
+
+header .bi-house,
+header .bi-house-fill {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header .bi-house {
+    color: whitesmoke;
+}
+
+header .bi-house-fill {
+    color: whitesmoke;
+    display: none;
+}
+
+header a:hover .bi-house {
+    display: none;
+}
+
+header a:hover .bi-house-fill {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .bi-house,
+    header .bi-house-fill {
+        top: 10px;
+        left: 10px;
+        transform: none;
+        font-size: 30px;
+    }
+
+    section {
+        width: 100%;
+        padding: 15px;
+    }
 }
